@@ -1,0 +1,9 @@
+# ninja log v5
+5	1801	6764278433861690	CMakeFiles/dijkstra.dir/main.cpp.obj	2377ed31a5a64b97
+1	302	6764278991489333	build.ninja	b9bc541c17a6523e
+2899	3330	6764263001571251	dijkstra.exe	6141534566f31a86
+6	212	6764189483819691	CMakeFiles/dijkstra.dir/rit.cpp.obj	eb0d58c2a3cc95d2
+24	2064	6764278436554599	CMakeFiles/dijkstra.dir/Source_Files/reis.cpp.obj	5109698c9d6b2b39
+4	1599	6764213952808078	CMakeFiles/dijkstra.dir/Source_Files/stap.cpp.obj	ff5fe8f4dce934d6
+7	303	6764279005295115	CMakeFiles/dijkstra.dir/Source_Files/stap.cpp.obj	ff5fe8f4dce934d6
+304	722	6764279009472443	dijkstra.exe	a1223a6f46b11825
