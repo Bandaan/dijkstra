@@ -8,7 +8,7 @@ Treinrit::Treinrit() {
 }
 
 void Treinrit::setVerticesSize(int hoekpunten) {
-    this->numberVertices = hoekpunten
+    this->numberVertices = hoekpunten;
 }
 
 int Treinrit::getVerticesSize() {

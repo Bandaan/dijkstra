@@ -58,8 +58,10 @@ public:
     void calculateGraph();
 
 
-    void shortestPath(int startPunt); // print de korste route vanaf startPunt
-    void printShortest(vector<int> dist);
+    vector<int> shortestPath(int startPunt, int hoekPunten, list<pair<int, int>> * bestemmingLijst); // print de korste route vanaf startPunt
+    void getShortestPath();
+
+    void printShortest(vector<int> dist , int hoekPunten);
     bool compareTo();
 };
 

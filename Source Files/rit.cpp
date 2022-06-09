@@ -9,7 +9,7 @@
 Rit::Rit() {;
 }
 
-int Rit::getVerticesSite() {
+int Rit::getVerticesSize() {
     return this->numberVertices;
 }
 

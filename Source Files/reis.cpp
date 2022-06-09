@@ -17,6 +17,7 @@ using namespace std;
 
 // Allocates memory for adjacency list
 Reis::Reis(int beginBestemming, int eindBestemming) {
+
     this->beginBestemming = beginBestemming;
     this->eindBestemming = eindBestemming;
 }
@@ -87,44 +88,60 @@ void Reis::setReisstatus() {
     }
 }
 
-bool Reis::compareTo() {
-    return false;
-}
-
 void Reis::calculateGraph() {
-
-    setReisstatus();
 
     if (vluchtStatus) {
         verbindingVlucht = new list< pair<int, int> >[v.getVerticesSize()];
+
+        for(Stap &stap : vluchtStappen) {
+            verbindingVlucht[stap.getBeginstap()].push_back(make_pair(stap.getEindstap(), stap.getGewicht()));
+            verbindingVlucht[stap.getEindstap()].push_back(make_pair(stap.getBeginstap(), stap.getGewicht()));
+        }
     }
     if (ritStatus) {
         verbindingRit = new list< pair<int, int> >[r.getVerticesSize()];
+
+        for(Stap &stap : ritStappen) {
+            verbindingRit[stap.getBeginstap()].push_back(make_pair(stap.getEindstap(), stap.getGewicht()));
+            verbindingRit[stap.getEindstap()].push_back(make_pair(stap.getBeginstap(), stap.getGewicht()));
+        }
     }
     if (treinritStatus) {
         verbindingTreinrit = new list< pair<int, int> >[t.getVerticesSize()];
+
+        for(Stap &stap : treinritStappen) {
+            verbindingTreinrit[stap.getBeginstap()].push_back(make_pair(stap.getEindstap(), stap.getGewicht()));
+            verbindingTreinrit[stap.getEindstap()].push_back(make_pair(stap.getBeginstap(), stap.getGewicht()));
+        }
+    }
+}
+
+
+void Reis::getShortestPath() {
+
+    setReisstatus();
+    calculateGraph();
+
+    if (vluchtStatus) {
+        vector<int> vluchtResult = shortestPath(this->beginBestemming, v.getVerticesSize(), verbindingVlucht);
+        printShortest(vluchtResult, v.getVerticesSize());
+    }
+    if (ritStatus) {
+        vector<int> ritResult = shortestPath(this->beginBestemming, r.getVerticesSize(), verbindingRit);
+        printShortest(ritResult, r.getVerticesSize());
+    }
+    if (treinritStatus) {
+        vector<int> treinritResult = shortestPath(this->beginBestemming, t.getVerticesSize(), verbindingTreinrit);
+        printShortest(treinritResult, t.getVerticesSize());
     }
 
 
-
-
-
-
-
-    stappen[stap.getBeginstap()].push_back(make_pair(stap.getEindstap(), stap.getGewicht()));
-    stappen[stap.getEindstap()].push_back(make_pair(stap.getBeginstap(), stap.getGewicht()));
 }
 
-void Reis::printShortest(vector<int> dist) {
-    // Print shortest distances stored in dist[]
-    printf("Vertex Distance from Source\n");
-    for (int i = 0; i < hoekPunten; ++i)
-        printf("%d \t\t %d\n", i, dist[i]);
-}
-
-void Reis::shortestPath(int startPunt) {
+vector<int> Reis::shortestPath(int startPunt, int hoekPunten, list<pair<int, int>> * bestemmingLijst) {
 
     calculateGraph();
+
     set< pair<int, int> > setds;     // Create a set to store vertices that are being
 
     vector<int> dist(hoekPunten, INF); // Create a vector for distances and initialize all, distances as infinite (INF)
@@ -149,7 +166,7 @@ void Reis::shortestPath(int startPunt) {
         // 'i' is used to get all adjacent vertices of a vertex
         list< pair<int, int> >::iterator i;
 
-        for (i = stappen[u].begin(); i != stappen[u].end(); ++i)
+        for (i = bestemmingLijst[u].begin(); i != bestemmingLijst[u].end(); ++i)
         {
             // Get vertex label and weight of current adjacent
             // of u.
@@ -175,6 +192,18 @@ void Reis::shortestPath(int startPunt) {
             }
         }
     }
-
-    printShortest(dist);
+    return dist;
 }
+
+void Reis::printShortest(vector<int> dist , int hoekPunten) {
+    // Print shortest distances stored in dist[]
+    printf("Vertex Distance from Source\n");
+    for (int i = 0; i < hoekPunten; ++i)
+        printf("%d \t\t %d\n", i, dist[i]);
+}
+
+
+bool Reis::compareTo() {
+    return false;
+}
+
