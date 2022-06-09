@@ -14,23 +14,21 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b841d95-170f-4834-b83a-9af2f1d5d596" name="Changes" comment="Meerdere reismogelijkheden toegevoegd (Daan)">
+    <list default="true" id="2b841d95-170f-4834-b83a-9af2f1d5d596" name="Changes" comment="Alles op elkaar aangesloten (Daan)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Header Files/reis.h" beforeDir="false" afterPath="$PROJECT_DIR$/Header Files/reis.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Header Files/rit.h" beforeDir="false" afterPath="$PROJECT_DIR$/Header Files/rit.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Header Files/treinrit.h" beforeDir="false" afterPath="$PROJECT_DIR$/Header Files/treinrit.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Header Files/vlucht.h" beforeDir="false" afterPath="$PROJECT_DIR$/Header Files/vlucht.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source Files/reis.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source Files/reis.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source Files/rit.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source Files/rit.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source Files/treinrit.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source Files/treinrit.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-a033300667f65876be28.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-06-08T21-44-59-0302.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-dijkstra-Debug-ef77f48295bd9f7ce3df.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source Files/vlucht.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source Files/vlucht.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dijkstra.dir/Source_Files/reis.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dijkstra.dir/Source_Files/reis.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dijkstra.dir/Source_Files/stap.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dijkstra.dir/Source_Files/stap.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dijkstra.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dijkstra.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/dijkstra.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dijkstra.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
@@ -75,9 +73,9 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="dijkstra" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dijkstra" TARGET_NAME="dijkstra" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dijkstra" RUN_TARGET_NAME="dijkstra">
@@ -102,7 +100,8 @@
       <workItem from="1654715138385" duration="4171000" />
       <workItem from="1654720140103" duration="5403000" />
       <workItem from="1654759452960" duration="8142000" />
-      <workItem from="1654774955315" duration="3866000" />
+      <workItem from="1654774955315" duration="5045000" />
+      <workItem from="1654803399252" duration="7333000" />
     </task>
     <task id="LOCAL-00001" summary="Meerdere reismogelijkheden toegevoegd (Daan)">
       <created>1654767610112</created>
@@ -111,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654767610112</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Alles op elkaar aangesloten (Daan)">
+      <created>1654779466327</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1654779466327</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +136,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Meerdere reismogelijkheden toegevoegd (Daan)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Meerdere reismogelijkheden toegevoegd (Daan)" />
+    <MESSAGE value="Alles op elkaar aangesloten (Daan)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alles op elkaar aangesloten (Daan)" />
   </component>
 </project>

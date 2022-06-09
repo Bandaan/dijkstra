@@ -10,8 +10,15 @@ private:
     int numberVertices = 0;
 
 public:
+    int kansKofferKwijt;
+    int comfort;
+
+    Vlucht(int kansKofferKwijt, int comfort);
+
     Vlucht();
     void setVerticesSize(int hoekpunten);
     int getVerticesSize();
+
+    int calculateEdgeWeight(int afstand);
 };
 #endif //DIJKSTRA_VLUCHT_H

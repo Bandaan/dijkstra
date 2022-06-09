@@ -36,6 +36,7 @@ private:
     std::vector<Stap> ritStappen = {};
     std::vector<Stap> treinritStappen= {};
 
+    std::array<vector<int>, 3> reisResult = {};
 
 public:
     Vlucht v = Vlucht();
@@ -46,23 +47,20 @@ public:
 
     Reis(int beginBestemming, int eindBestemming); // Constructor
 
-    void addEdgeVlucht(Stap stap);  // functie om een punt toe te voegen
-    void addEdgeRit(Stap stap);  // functie om een punt toe te voegen
-    void addEdgeTreinrit(Stap stap);  // functie om een punt toe te voegen
+    void addEdgeVlucht(Stap stap, Vlucht & vlucht);  // functie om een punt toe te voegen
+    void addEdgeRit(Stap stap, Rit & rit);  // functie om een punt toe te voegen
+    void addEdgeTreinrit(Stap stap, Treinrit & treinrit);  // functie om een punt toe te voegen
 
     void setReisstatus();
     bool stepExistsChange(Stap stap, std::vector<Stap> vervoerLijst);
     int getVerticesSize(std::vector<Stap> vervoerLijst);
-
-
     void calculateGraph();
 
 
     vector<int> shortestPath(int startPunt, int hoekPunten, list<pair<int, int>> * bestemmingLijst); // print de korste route vanaf startPunt
-    void getShortestPath();
+    std::array<vector<int>, 3> getShortestPath();
 
-    void printShortest(vector<int> dist , int hoekPunten);
-    bool compareTo();
+    void compareTo(std::array<vector<int>, 3> routes);
 };
 
 

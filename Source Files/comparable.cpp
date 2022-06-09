@@ -5,6 +5,6 @@
 #include "../Header Files/comparable.h"
 
 
-bool IContainer::compareTo() {
+bool Comparable::compareTo() {
     return false;
 }

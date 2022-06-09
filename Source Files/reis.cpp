@@ -36,23 +36,34 @@ bool Reis::stepExistsChange(Stap stap, std::vector<Stap> vervoerLijst) {
     return stapExist;
 }
 
-void Reis::addEdgeVlucht(Stap stap) {
+void Reis::addEdgeVlucht(Stap stap, Vlucht & vlucht) {
     // Als het pad al bestaat dan het gewicht veranderen
+
+    int newGewicht = vlucht.calculateEdgeWeight(stap.getGewicht());
+    stap.setGewicht(newGewicht);
+
     if (!stepExistsChange(stap, vluchtStappen)) {
         vluchtStappen.push_back(stap);
     }
 }
 
-void Reis::addEdgeRit(Stap stap) {
+void Reis::addEdgeRit(Stap stap, Rit & rit) {
     // Als het pad al bestaat dan het gewicht veranderen
+
+    int newGewicht = rit.calculateEdgeWeight(stap.getGewicht());
+    stap.setGewicht(newGewicht);
+
     if (!stepExistsChange(stap, ritStappen)) {
         ritStappen.push_back(stap);
     }
 }
 
-
-void Reis::addEdgeTreinrit(Stap stap) {
+void Reis::addEdgeTreinrit(Stap stap, Treinrit & treinrit) {
     // Als het pad al bestaat dan het gewicht veranderen
+
+    int newGewicht = treinrit.calculateEdgeWeight(stap.getGewicht());
+    stap.setGewicht(newGewicht);
+
     if (!stepExistsChange(stap, treinritStappen)) {
         treinritStappen.push_back(stap);
     }
@@ -117,23 +128,25 @@ void Reis::calculateGraph() {
 }
 
 
-void Reis::getShortestPath() {
+std::array<vector<int>, 3> Reis::getShortestPath() {
 
     setReisstatus();
     calculateGraph();
 
     if (vluchtStatus) {
         vector<int> vluchtResult = shortestPath(this->beginBestemming, v.getVerticesSize(), verbindingVlucht);
-        printShortest(vluchtResult, v.getVerticesSize());
+        reisResult[0] = vluchtResult;
     }
     if (ritStatus) {
         vector<int> ritResult = shortestPath(this->beginBestemming, r.getVerticesSize(), verbindingRit);
-        printShortest(ritResult, r.getVerticesSize());
+        reisResult[1] = ritResult;
     }
     if (treinritStatus) {
         vector<int> treinritResult = shortestPath(this->beginBestemming, t.getVerticesSize(), verbindingTreinrit);
-        printShortest(treinritResult, t.getVerticesSize());
+        reisResult[2] = treinritResult;
     }
+
+    return reisResult;
 
 
 }
@@ -195,15 +208,13 @@ vector<int> Reis::shortestPath(int startPunt, int hoekPunten, list<pair<int, int
     return dist;
 }
 
-void Reis::printShortest(vector<int> dist , int hoekPunten) {
-    // Print shortest distances stored in dist[]
+
+void Reis::compareTo(std::array<vector<int>, 3> routes) {
+    // routes met elkaar combineren
+
     printf("Vertex Distance from Source\n");
-    for (int i = 0; i < hoekPunten; ++i)
-        printf("%d \t\t %d\n", i, dist[i]);
-}
 
-
-bool Reis::compareTo() {
-    return false;
+    for (int i = 0; i < v.getVerticesSize(); ++i)
+        printf("%d \t\t %d\n", i, routes[0][i]);
 }
 

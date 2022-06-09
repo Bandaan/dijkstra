@@ -11,9 +11,16 @@ private:
     int numberVertices = 0;
 
 public:
+    int vertragingKans;
+    int comfort;
+
+    Treinrit(int vertragingKans, int comfort);
+
     Treinrit();
     void setVerticesSize(int hoekpunten);
     int getVerticesSize();
+
+    int calculateEdgeWeight(int afstand);
 };
 
 
