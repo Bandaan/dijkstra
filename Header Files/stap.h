@@ -18,5 +18,7 @@ public:
     int getBeginstap();
     int getEindstap();
     int getGewicht();
+
+    void setGewicht(int newGewicht);
 };
 #endif //DIJKSTRA_STAP_H

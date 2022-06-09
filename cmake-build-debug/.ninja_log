@@ -7,3 +7,6 @@
 4	1599	6764213952808078	CMakeFiles/dijkstra.dir/Source_Files/stap.cpp.obj	ff5fe8f4dce934d6
 7	303	6764279005295115	CMakeFiles/dijkstra.dir/Source_Files/stap.cpp.obj	ff5fe8f4dce934d6
 304	722	6764279009472443	dijkstra.exe	a1223a6f46b11825
+8	2529	6764628628881305	CMakeFiles/dijkstra.dir/main.cpp.obj	2377ed31a5a64b97
+73	2778	6764628631374622	CMakeFiles/dijkstra.dir/Source_Files/reis.cpp.obj	5109698c9d6b2b39
+2778	3654	6764628640020691	dijkstra.exe	a1223a6f46b11825

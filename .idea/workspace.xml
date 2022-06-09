@@ -15,8 +15,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b841d95-170f-4834-b83a-9af2f1d5d596" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Header Files/reis.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source Files/reis.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Header Files/reis.h" beforeDir="false" afterPath="$PROJECT_DIR$/Header Files/reis.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Header Files/rit.h" beforeDir="false" afterPath="$PROJECT_DIR$/Header Files/rit.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Header Files/stap.h" beforeDir="false" afterPath="$PROJECT_DIR$/Header Files/stap.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Header Files/treinrit.h" beforeDir="false" afterPath="$PROJECT_DIR$/Header Files/treinrit.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Header Files/vlucht.h" beforeDir="false" afterPath="$PROJECT_DIR$/Header Files/vlucht.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source Files/reis.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source Files/reis.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source Files/rit.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source Files/rit.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source Files/stap.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source Files/stap.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source Files/treinrit.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source Files/treinrit.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source Files/vlucht.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source Files/vlucht.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dijkstra.dir/Source_Files/reis.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dijkstra.dir/Source_Files/reis.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dijkstra.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dijkstra.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/dijkstra.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dijkstra.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,11 +74,6 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="dijkstra" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dijkstra" TARGET_NAME="dijkstra" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dijkstra" RUN_TARGET_NAME="dijkstra">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -84,7 +94,8 @@
       <workItem from="1654612890151" duration="1200000" />
       <workItem from="1654703171623" duration="1059000" />
       <workItem from="1654715138385" duration="4171000" />
-      <workItem from="1654720140103" duration="5045000" />
+      <workItem from="1654720140103" duration="5403000" />
+      <workItem from="1654759452960" duration="7783000" />
     </task>
     <servers />
   </component>

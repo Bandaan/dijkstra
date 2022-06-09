@@ -3,28 +3,114 @@
 //
 #include "../Header Files/reis.h"
 #include "../Header Files/stap.h"
+#include "../Header Files/vlucht.h"
+#include "../Header Files/rit.h"
+#include "../Header Files/treinrit.h"
 
 
 // Program to find Dijkstra's shortest path using STL set
 #include<bits/stdc++.h>
+
 using namespace std;
 # define INF 0x3f3f3f3f
 
 
 // Allocates memory for adjacency list
-Reis::Reis(int hoekPunten, int beginBestemming, int eindBestemming) {
-    this->hoekPunten = hoekPunten;
+Reis::Reis(int beginBestemming, int eindBestemming) {
     this->beginBestemming = beginBestemming;
     this->eindBestemming = eindBestemming;
+}
 
-    stappen = new list< pair<int, int> >[hoekPunten];
+
+bool Reis::stepExistsChange(Stap stap, std::vector<Stap> vervoerLijst) {
+    bool stapExist = false;
+
+    for(Stap &oudeStap : vervoerLijst) {
+        if ((oudeStap.getBeginstap() == stap.getBeginstap()) && oudeStap.getEindstap() == stap.getEindstap()) {
+            oudeStap.setGewicht(stap.getGewicht());
+            stapExist = true;
+        }
+    }
+
+    return stapExist;
+}
+
+void Reis::addEdgeVlucht(Stap stap) {
+    // Als het pad al bestaat dan het gewicht veranderen
+    if (!stepExistsChange(stap, vluchtStappen)) {
+        vluchtStappen.push_back(stap);
+    }
+}
+
+void Reis::addEdgeRit(Stap stap) {
+    // Als het pad al bestaat dan het gewicht veranderen
+    if (!stepExistsChange(stap, ritStappen)) {
+        ritStappen.push_back(stap);
+    }
+}
+
+
+void Reis::addEdgeTreinrit(Stap stap) {
+    // Als het pad al bestaat dan het gewicht veranderen
+    if (!stepExistsChange(stap, treinritStappen)) {
+        treinritStappen.push_back(stap);
+    }
+}
+
+int Reis::getVerticesSize(std::vector<Stap> vervoerLijst) {
+
+    std::vector<int> v = {};
+
+    for(Stap &stap : vervoerLijst) {
+        if (!std::count(v.begin(), v.end(), stap.getBeginstap())) {
+            v.push_back(stap.getBeginstap());
+        }
+        if (!std::count(v.begin(), v.end(), stap.getEindstap())) {
+            v.push_back(stap.getEindstap());
+        }
+    }
+    return v.size();
+}
+
+void Reis::setReisstatus() {
+    if (getVerticesSize(vluchtStappen) != 0) {
+        vluchtStatus = true;
+        v.setVerticesSize(getVerticesSize(vluchtStappen));
+    }
+    if (getVerticesSize(ritStappen) != 0) {
+        ritStatus = true;
+        r.setVerticesSize(getVerticesSize(ritStappen));
+    }
+    if (getVerticesSize(treinritStappen) != 0) {
+        treinritStatus = true;
+        t.setVerticesSize(getVerticesSize(treinritStappen));
+    }
 }
 
 bool Reis::compareTo() {
     return false;
 }
 
-void Reis::addEdge(Stap stap) {
+void Reis::calculateGraph() {
+
+    setReisstatus();
+
+    if (vluchtStatus) {
+        verbindingVlucht = new list< pair<int, int> >[v.getVerticesSize()];
+    }
+    if (ritStatus) {
+        verbindingRit = new list< pair<int, int> >[r.getVerticesSize()];
+    }
+    if (treinritStatus) {
+        verbindingTreinrit = new list< pair<int, int> >[t.getVerticesSize()];
+    }
+
+
+
+
+
+
+
     stappen[stap.getBeginstap()].push_back(make_pair(stap.getEindstap(), stap.getGewicht()));
     stappen[stap.getEindstap()].push_back(make_pair(stap.getBeginstap(), stap.getGewicht()));
 }
@@ -37,6 +123,8 @@ void Reis::printShortest(vector<int> dist) {
 }
 
 void Reis::shortestPath(int startPunt) {
+
+    calculateGraph();
     set< pair<int, int> > setds;     // Create a set to store vertices that are being
 
     vector<int> dist(hoekPunten, INF); // Create a vector for distances and initialize all, distances as infinite (INF)

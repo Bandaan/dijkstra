@@ -29,6 +29,10 @@ int Stap::getGewicht() {
     return this->gewicht;
 }
 
+void Stap::setGewicht(int newGewicht) {
+    this->gewicht = newGewicht;
+}
+
 
 
 

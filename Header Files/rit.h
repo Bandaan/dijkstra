@@ -6,8 +6,14 @@
 #define DIJKSTRA_RIT_H
 
 
-class rit {
+class Rit {
+private:
+    int numberVertices = 0;
 
+public:
+    Rit();
+    void setVerticesSize(int hoekpunten);
+    int getVerticesSize();
 };
 
 
