@@ -12,3 +12,5 @@
 65	5080	6765628139254815	CMakeFiles/dijkstra.dir/Source_Files/comparable.cpp.obj	de833fc1172192a5
 7	2259	6765661803459127	CMakeFiles/dijkstra.dir/main.cpp.obj	2377ed31a5a64b97
 2261	2572	6765661806506513	dijkstra.exe	3fd412ba260b02c0
+6	3597	6765735179915053	CMakeFiles/dijkstra.dir/Source_Files/reis.cpp.obj	5109698c9d6b2b39
+3598	4204	6765735185945778	dijkstra.exe	3fd412ba260b02c0
