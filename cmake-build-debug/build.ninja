@@ -85,6 +85,12 @@ build CMakeFiles/dijkstra.dir/Source_Files/treinrit.cpp.obj: CXX_COMPILER__dijks
   OBJECT_DIR = CMakeFiles\dijkstra.dir
   OBJECT_FILE_DIR = CMakeFiles\dijkstra.dir\Source_Files
 
+build CMakeFiles/dijkstra.dir/Source_Files/comparable.cpp.obj: CXX_COMPILER__dijkstra_Debug C$:/Users/daanv/CLionProjects/dijkstra/Source$ Files/comparable.cpp || cmake_object_order_depends_target_dijkstra
+  DEP_FILE = CMakeFiles\dijkstra.dir\Source_Files\comparable.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\dijkstra.dir
+  OBJECT_FILE_DIR = CMakeFiles\dijkstra.dir\Source_Files
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target dijkstra
@@ -93,7 +99,7 @@ build CMakeFiles/dijkstra.dir/Source_Files/treinrit.cpp.obj: CXX_COMPILER__dijks
 #############################################
 # Link the executable dijkstra.exe
 
-build dijkstra.exe: CXX_EXECUTABLE_LINKER__dijkstra_Debug CMakeFiles/dijkstra.dir/main.cpp.obj CMakeFiles/dijkstra.dir/Source_Files/reis.cpp.obj CMakeFiles/dijkstra.dir/Source_Files/stap.cpp.obj CMakeFiles/dijkstra.dir/Source_Files/vlucht.cpp.obj CMakeFiles/dijkstra.dir/Source_Files/rit.cpp.obj CMakeFiles/dijkstra.dir/Source_Files/treinrit.cpp.obj
+build dijkstra.exe: CXX_EXECUTABLE_LINKER__dijkstra_Debug CMakeFiles/dijkstra.dir/main.cpp.obj CMakeFiles/dijkstra.dir/Source_Files/reis.cpp.obj CMakeFiles/dijkstra.dir/Source_Files/stap.cpp.obj CMakeFiles/dijkstra.dir/Source_Files/vlucht.cpp.obj CMakeFiles/dijkstra.dir/Source_Files/rit.cpp.obj CMakeFiles/dijkstra.dir/Source_Files/treinrit.cpp.obj CMakeFiles/dijkstra.dir/Source_Files/comparable.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\dijkstra.dir

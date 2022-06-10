@@ -5,8 +5,12 @@
 #ifndef DIJKSTRA_COMPARABLE_H
 #define DIJKSTRA_COMPARABLE_H
 
+#include<bits/stdc++.h>
+using namespace std;
+#include <vector>
+
 class Comparable {
-    virtual bool compareTo() = 0;
+    virtual int compareTo() = 0;
 };
 
 #endif //DIJKSTRA_COMPARABLE_H

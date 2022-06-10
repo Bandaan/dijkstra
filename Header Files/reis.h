@@ -36,7 +36,9 @@ private:
     std::vector<Stap> ritStappen = {};
     std::vector<Stap> treinritStappen= {};
 
-    std::array<vector<int>, 3> reisResult = {};
+    vector<int> vluchtResult {};
+    vector<int> ritResult {};
+    vector<int> treinritResult {};
 
 public:
     Vlucht v = Vlucht();
@@ -58,9 +60,9 @@ public:
 
 
     vector<int> shortestPath(int startPunt, int hoekPunten, list<pair<int, int>> * bestemmingLijst); // print de korste route vanaf startPunt
-    std::array<vector<int>, 3> getShortestPath();
+    void getShortestPath();
 
-    void compareTo(std::array<vector<int>, 3> routes);
+    int compareTo();
 };
 
 

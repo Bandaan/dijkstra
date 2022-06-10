@@ -14,22 +14,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b841d95-170f-4834-b83a-9af2f1d5d596" name="Changes" comment="Alles op elkaar aangesloten (Daan)">
+    <list default="true" id="2b841d95-170f-4834-b83a-9af2f1d5d596" name="Changes" comment="Alleen nog vergelijken (Daan)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Header Files/comparable.h" beforeDir="false" afterPath="$PROJECT_DIR$/Header Files/comparable.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Header Files/reis.h" beforeDir="false" afterPath="$PROJECT_DIR$/Header Files/reis.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Header Files/rit.h" beforeDir="false" afterPath="$PROJECT_DIR$/Header Files/rit.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Header Files/treinrit.h" beforeDir="false" afterPath="$PROJECT_DIR$/Header Files/treinrit.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Header Files/vlucht.h" beforeDir="false" afterPath="$PROJECT_DIR$/Header Files/vlucht.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source Files/comparable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source Files/comparable.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source Files/reis.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source Files/reis.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source Files/rit.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source Files/rit.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source Files/treinrit.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source Files/treinrit.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source Files/vlucht.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source Files/vlucht.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dijkstra.dir/Source_Files/reis.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dijkstra.dir/Source_Files/reis.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dijkstra.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dijkstra.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/dijkstra.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dijkstra.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +96,9 @@
       <workItem from="1654720140103" duration="5403000" />
       <workItem from="1654759452960" duration="8142000" />
       <workItem from="1654774955315" duration="5045000" />
-      <workItem from="1654803399252" duration="7333000" />
+      <workItem from="1654803399252" duration="7544000" />
+      <workItem from="1654857731679" duration="4678000" />
+      <workItem from="1654862602090" duration="402000" />
     </task>
     <task id="LOCAL-00001" summary="Meerdere reismogelijkheden toegevoegd (Daan)">
       <created>1654767610112</created>
@@ -117,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654779466327</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Alleen nog vergelijken (Daan)">
+      <created>1654811165618</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1654811165618</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +141,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Meerdere reismogelijkheden toegevoegd (Daan)" />
     <MESSAGE value="Alles op elkaar aangesloten (Daan)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alles op elkaar aangesloten (Daan)" />
+    <MESSAGE value="Alleen nog vergelijken (Daan)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alleen nog vergelijken (Daan)" />
   </component>
 </project>

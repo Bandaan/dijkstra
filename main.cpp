@@ -6,7 +6,7 @@ int main()
 {
     Reis g = Reis(0, 8);
 
-    Vlucht v = Vlucht(1, 10);
+    Vlucht v = Vlucht(10, 2);
 
     g.addEdgeVlucht(Stap(0, 1, 40), v);
     g.addEdgeVlucht(Stap(0, 7, 80), v);
@@ -40,7 +40,7 @@ int main()
     g.addEdgeRit(Stap(6, 8, 60), r);
     g.addEdgeRit(Stap(7, 8, 70), r);
 
-    Treinrit t(3, 5);
+    Treinrit t(10, 10);
 
     g.addEdgeTreinrit(Stap(0, 1, 40), t);
     g.addEdgeTreinrit(Stap(0, 7, 80), t);
@@ -58,11 +58,9 @@ int main()
     g.addEdgeTreinrit(Stap(7, 8, 70), t);
 
 
-    std::array<vector<int>, 3> result = g.getShortestPath();
+    g.getShortestPath();
 
-    g.compareTo(result);
-
-
+    g.compareTo();
 
     return 0;
 }

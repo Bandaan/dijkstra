@@ -2,10 +2,6 @@
 // Created by daanv on 08/06/2022.
 //
 #include "../Header Files/reis.h"
-#include "../Header Files/stap.h"
-#include "../Header Files/vlucht.h"
-#include "../Header Files/rit.h"
-#include "../Header Files/treinrit.h"
 
 
 // Program to find Dijkstra's shortest path using STL set
@@ -128,25 +124,20 @@ void Reis::calculateGraph() {
 }
 
 
-std::array<vector<int>, 3> Reis::getShortestPath() {
+void Reis::getShortestPath() {
 
     setReisstatus();
     calculateGraph();
 
     if (vluchtStatus) {
-        vector<int> vluchtResult = shortestPath(this->beginBestemming, v.getVerticesSize(), verbindingVlucht);
-        reisResult[0] = vluchtResult;
+        vluchtResult = shortestPath(this->beginBestemming, v.getVerticesSize(), verbindingVlucht);
     }
     if (ritStatus) {
-        vector<int> ritResult = shortestPath(this->beginBestemming, r.getVerticesSize(), verbindingRit);
-        reisResult[1] = ritResult;
+        ritResult = shortestPath(this->beginBestemming, r.getVerticesSize(), verbindingRit);
     }
     if (treinritStatus) {
-        vector<int> treinritResult = shortestPath(this->beginBestemming, t.getVerticesSize(), verbindingTreinrit);
-        reisResult[2] = treinritResult;
+        treinritResult = shortestPath(this->beginBestemming, t.getVerticesSize(), verbindingTreinrit);
     }
-
-    return reisResult;
 
 
 }
@@ -209,12 +200,52 @@ vector<int> Reis::shortestPath(int startPunt, int hoekPunten, list<pair<int, int
 }
 
 
-void Reis::compareTo(std::array<vector<int>, 3> routes) {
+int Reis::compareTo() {
     // routes met elkaar combineren
+
+    std::array<pair<std::string, int>, 3> vervoersmiddelen;
 
     printf("Vertex Distance from Source\n");
 
-    for (int i = 0; i < v.getVerticesSize(); ++i)
-        printf("%d \t\t %d\n", i, routes[0][i]);
+    if (vluchtStatus) {
+        for (int i = 0; i < v.getVerticesSize(); ++i)
+            printf("%d \t\t %d\n", i, vluchtResult[i]);
+
+        vervoersmiddelen[0] = make_pair("vliegtuig", vluchtResult[this->eindBestemming]);
+
+    }
+
+    printf("Vertex Distance from Source\n");
+
+    if (ritStatus) {
+
+        for (int i = 0; i < v.getVerticesSize(); ++i)
+            printf("%d \t\t %d\n", i, ritResult[i]);
+
+        vervoersmiddelen[1] = make_pair("auto", ritResult[this->eindBestemming]);
+
+    }
+
+    printf("Vertex Distance from Source\n");
+
+    if (treinritStatus) {
+        for (int i = 0; i < v.getVerticesSize(); ++i)
+            printf("%d \t\t %d\n", i, treinritResult[i]);
+
+        vervoersmiddelen[2] = make_pair("trein", treinritResult[this->eindBestemming]);
+    }
+
+    std::sort(std::begin(vervoersmiddelen), std::end(vervoersmiddelen));
+
+    printf("\nDe beste reis opties:\n");
+
+    for(int i = 3; i-- > 0; ) {
+        cout << i << ".\t" << vervoersmiddelen[i].first << endl;
+    }
+
+
+
+
+    return 0;
 }
 
