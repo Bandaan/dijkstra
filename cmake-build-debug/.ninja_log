@@ -1,8 +1,8 @@
 # ninja log v5
-67	3052	6765661334919441	CMakeFiles/dijkstra.dir/main.cpp.obj	2377ed31a5a64b97
-3745	4111	6765661345432725	dijkstra.exe	3fd412ba260b02c0
-1	302	6765611068179876	build.ninja	b9bc541c17a6523e
-18	3744	6765661341806088	CMakeFiles/dijkstra.dir/Source_Files/reis.cpp.obj	5109698c9d6b2b39
+7	2259	6765661803459127	CMakeFiles/dijkstra.dir/main.cpp.obj	2377ed31a5a64b97
+3598	4204	6765735185945778	dijkstra.exe	3fd412ba260b02c0
+1	302	6768242708963954	build.ninja	b9bc541c17a6523e
+6	3597	6765735179915053	CMakeFiles/dijkstra.dir/Source_Files/reis.cpp.obj	5109698c9d6b2b39
 1	21	0	clean	2aef2209a9599d6
 6	212	6764189483819691	CMakeFiles/dijkstra.dir/rit.cpp.obj	eb0d58c2a3cc95d2
 17	211	6765617986755563	CMakeFiles/dijkstra.dir/Source_Files/stap.cpp.obj	ff5fe8f4dce934d6
@@ -10,7 +10,9 @@
 34	251	6765617987074710	CMakeFiles/dijkstra.dir/Source_Files/vlucht.cpp.obj	729a91d2d5621ada
 40	256	6765617987074710	CMakeFiles/dijkstra.dir/Source_Files/rit.cpp.obj	6be28c718f8911a3
 65	5080	6765628139254815	CMakeFiles/dijkstra.dir/Source_Files/comparable.cpp.obj	de833fc1172192a5
-7	2259	6765661803459127	CMakeFiles/dijkstra.dir/main.cpp.obj	2377ed31a5a64b97
-2261	2572	6765661806506513	dijkstra.exe	3fd412ba260b02c0
-6	3597	6765735179915053	CMakeFiles/dijkstra.dir/Source_Files/reis.cpp.obj	5109698c9d6b2b39
-3598	4204	6765735185945778	dijkstra.exe	3fd412ba260b02c0
+239	1304	6768242748934794	CMakeFiles/dijkstra.dir/Source_Files/treinrit.cpp.obj	1aaaa36cc634dd3
+246	1318	6768242748994983	CMakeFiles/dijkstra.dir/Source_Files/vlucht.cpp.obj	729a91d2d5621ada
+234	1323	6768242749104688	CMakeFiles/dijkstra.dir/Source_Files/rit.cpp.obj	6be28c718f8911a3
+229	3733	6768242773308288	CMakeFiles/dijkstra.dir/main.cpp.obj	2377ed31a5a64b97
+166	4659	6768242782544018	CMakeFiles/dijkstra.dir/Source_Files/reis.cpp.obj	5109698c9d6b2b39
+4659	5341	6768242789310497	dijkstra.exe	3fd412ba260b02c0
